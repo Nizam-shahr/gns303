@@ -17,7 +17,12 @@ console.log(name);
     <div className='product-container'>
         <div className="product-carousel-container ">
           <h1 className='text-6xl font-bold text-center m-4'>{name}</h1>
+          <h2 className='made'>This product was made by group {skillID?.group} for the GNS 303 Project</h2>
           <div className="product-carousel">
+          
+            <h2 className='images-details'>Images <h3>(These are some images Final Product and During the process)</h3> </h2>
+            
+            
             <Carousel
             className='carousel'
               infiniteLoop
@@ -45,6 +50,12 @@ console.log(name);
             </Carousel>
           </div>
          
+        </div>
+        <div className='project-detail'>
+          <h2 className=''>About Project:</h2>
+          <p className=''>
+              {skillID.detail}
+          </p>
         </div>
         
     </div>

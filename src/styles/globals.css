@@ -30,8 +30,13 @@ line-height: normal;
 
 @media(max-width: 640px ){
 
+  .header-items {
+    display: none;
+  }
+
   .header {
     padding: 0 ;
+    width: 100vw;
   }
   .skills-container {
     display: flex;
@@ -76,6 +81,22 @@ line-height: normal;
   /* width: 70%; */
   }
 
+
+  .start { 
+    color: #FEFFED;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 54px */
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  background: #00C0E4;
+  width: 250px;
+  height: 50px;
+  flex-shrink: 0;
+  
+  }
   .acquire
 
   .people {
@@ -112,6 +133,41 @@ line-height: normal;
      
     }
 
+    .images-details {
+      display: flex;
+      font-size: 2rem;
+      justify-content: end;
+      font-weight: bold;
+      color: #991C3A;
+    }
+
+    .images-details h3 {
+      font-size: 12px;
+      width: 20rem;
+      color: black;
+      align-items: flex-end;
+    }
+
+    .project-detail {
+      padding: 1rem;
+    }
+
+    .project-detail h2 {
+      font-size: 2rem;
+      color: #991C3A;
+      font-weight: bold;
+    }
+
+    .project-detail p {
+      font-size:12px;
+    }
+
+    .made{
+      text-align: center;
+      font-size: 1rem;
+      padding: 8px;
+    }
+
     .user {
       min-width: 20px;
     }
@@ -121,6 +177,7 @@ line-height: normal;
 
   .header {
     padding: 0 3rem;
+    width: 100vw;
   }
   .skills-container {
     display: flex;
@@ -164,6 +221,23 @@ line-height: normal;
   text-transform: capitalize;
   width: 70%;
   }
+
+  
+  .start { 
+    color: #FEFFED;
+  font-family: Poppins;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%; /* 54px */
+  letter-spacing: 0.5px;
+  border-radius: 20px;
+  background: #00C0E4;
+  width: 370px;
+  height: 70px;
+  flex-shrink: 0;
+  
+  }
   .thumb {
     height: 5rem;
     width: 8rem;
@@ -178,13 +252,55 @@ line-height: normal;
   /* background: #991C3A;    */
    
   }
+
+  .images-details {
+    display: flex;
+    align-items: flex-end;
+    font-size: 2rem;
+    /* justify-content: end; */
+    font-weight: bold;
+    color: #991C3A;
+    padding: 0.5rem 2.3rem;
+  }
+
+  .images-details h3 {
+    font-size: 16px;
+    /* width: 20rem; */
+    color: black;
+    align-items: flex-end;
+  }
+
+  .project-detail {
+    padding: 1rem;
+  }
+
+  .project-detail h2 {
+    font-size: 2rem;
+    color: #991C3A;
+    font-weight: bold;
+    padding: 0 4rem;
+  }
+
+  .project-detail p {
+    font-size:16px;
+    padding: 1rem 4rem;
+  }
+
+  .made{
+    text-align: center;
+    font-size: 3rem;
+    padding: 8px;
+  }
+
+ 
 }
 
 
 .SignIn {
   border-radius: 10px;
 background: #00C0E4;
-width: 191.255px;
+width: fit-content;
+padding: 0 0.5rem ;
 height: 45px;
 flex-shrink: 0;
 }
@@ -212,11 +328,13 @@ padding: 2rem 0;
   align-items: center;
   position: relative;
   padding-top: 5rem ;
+ 
 }
 .why-skills-wrapper {
   background: #991C3A;
   display: flex;
   padding:2rem 3rem ;
+  width: 100vw;
 }
 
 
@@ -235,21 +353,6 @@ line-height: normal;
   top: -15%;
   right: 10%;
 
-}
-
-.start { 
-  color: #FEFFED;
-font-family: Poppins;
-font-size: 36px;
-font-style: normal;
-font-weight: 700;
-line-height: 150%; /* 54px */
-letter-spacing: 0.5px;
-border-radius: 20px;
-background: #00C0E4;
-width: 327px;
-height: 75px;
-flex-shrink: 0;
 }
 
 .names-of-students {
@@ -512,7 +615,9 @@ ground: #EDEEDD; */
   width: 100%;
 }
 
-
+.product-carousel-container h1 {
+  color: #991C3A;
+}
 
 .carousel {
   display: flex;
@@ -534,6 +639,10 @@ border-radius: 16px;
   margin: 0 auto;
 }
 
+.project-detail {
+  background: #EDEEDD;
+
+}
 
 .about-container {
   background: #FEFFED;

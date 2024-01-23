@@ -95,16 +95,16 @@ const changeColors = router.pathname === '/about'
   }, []);
 
   return (
-    <div className="flex p-4 items-center bg-yellow-400 header-container">
-      <div className="header flex items-center gap-4 justify-between w-full ">
+    <div className="flex p-4 items-center bg-yellow-400 header-container flex-shrink-0 w-full">
+      <div className="header flex items-center gap-4 justify-between ">
         <div onClick={() => router.push("/")} className="headerName">
-         <Image className="header-image" src='/headerlogo.jpg' alt="header-logo" width={100} height={50}/>
+         <Image className="header-imag cursor-pointer" src='/headerlogo.jpg' alt="header-logo" width={100} height={50}/>
         </div>
         <div className="flex items-center gap-8">
-        <div className="flex gap-4">
+        <div className="flex gap-4 header-items">
          <ul className="flex gap-8 text-xl">
             <li onClick={()=> router.push('/')} className={changeColor ? 'router-color' : 'header-item'} >Home </li>
-            <li className="">About</li>
+            <li onClick={()=> router.push('/about')} className={changeColors ? 'router-color cursor-pointer' : 'header-item cursor-pointer'}>About</li>
             <li>Contact</li>
          </ul>
         </div>
@@ -115,12 +115,12 @@ const changeColors = router.pathname === '/about'
             {loggedIn ? (
               <div>
               <button onClick={()=> setIsLogoutOpen(true)} className="logoutContainer">
-                <Image className="user" src='/user.png' width={30} height={30}  />
+                <Image className="use cursor-pointer" src='/user.png' width={30} height={30}  />
               </button>
               </div>
             ) : (
               <button className="SignIn shadow-slate-400 text-2xl" onClick={() => setIsModalOpen(true)}>
-                Sign in/Sign Up
+                  Log in
               </button>
             )}
              <Modal isOpen={isLogoutOpen} onRequestClose={() => setIsLogoutOpen(false)} style={modalStyles}>
