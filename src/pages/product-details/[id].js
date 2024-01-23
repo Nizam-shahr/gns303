@@ -7,10 +7,11 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 function Skill() {
 
 const router = useRouter()
-const {id} = router.query;
+const { id } = router.query;
 
 const skillID = products.find((item) => item.id === id)
-const name = skillID.name
+ 
+const name = skillID?.name
 console.log(name);
   return (
     <div className='product-container'>
