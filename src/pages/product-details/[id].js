@@ -54,7 +54,7 @@ console.log(name);
         <div className='project-detail'>
           <h2 className=''>About Project:</h2>
           <p className=''>
-              {skillID.detail}
+              {skillID?.detail}
           </p>
         </div>
         
