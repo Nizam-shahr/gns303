@@ -16,7 +16,7 @@ console.log(name);
   return (
     <div className='product-container'>
         <div className="product-carousel-container ">
-          <h1 className='text-6xl font-bold text-center m-4'>{name}</h1>
+          <h1 className='text-6xl font-bold m-4'>{name}</h1>
           <h2 className='made'>This product was made by group {skillID?.group} for the GNS 303 Project</h2>
           <div className="product-carousel">
           
