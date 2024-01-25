@@ -1,18 +1,15 @@
-import React, { useRef, useState } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { products } from "../../../data";
 import {
   LeftContainer,
   RightContainer,
-  StyledCarousel,
   TextWrapper,
-  TopContainer,
   Wrapper,
-} from "./style";
+} from "../../styles/Skill.styled";
 import Slider from "@/constants/Carousel";
 
-function Skill({ product }) {
+const Skill = ({ product }) => {
   console.log(product);
   return (
     <Wrapper>
@@ -34,9 +31,7 @@ function Skill({ product }) {
       </RightContainer>
     </Wrapper>
   );
-}
-
-export default Skill;
+};
 
 export const getStaticProps = async ({ params }) => {
   if (!params) throw new Error("route id param is not defined");
@@ -58,3 +53,5 @@ export const getStaticPaths = async () => {
   }));
   return { paths, fallback: false };
 };
+
+export default Skill;
