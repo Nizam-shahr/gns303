@@ -1,22 +1,21 @@
-import 'a/styles/globals.css'
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
-import { SessionProvider } from "next-auth/react"
-import Header from 'a/components/Header';
+import "react-multi-carousel/lib/styles.css";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
+import { SessionProvider } from "next-auth/react";
+import GlobalStyles from "../styles/GlobalStyles";
+import Layout from "../constants/Layout";
 
-
-export default function App({ Component, 
+export default function App({
+  Component,
   pageProps: { session, ...pageProps },
-  
-
 }) {
   return (
     <SessionProvider session={session}>
-      <Header/>
-      <Component {...pageProps} />
-    
-      <ToastContainer/>
+      <Layout>
+        <GlobalStyles />
+        <Component {...pageProps} />
+        <ToastContainer />
+      </Layout>
     </SessionProvider>
-  )
+  );
 }
-
