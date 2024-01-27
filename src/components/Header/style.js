@@ -21,6 +21,19 @@ export const HeaderWrapper = styled.nav`
     padding: 20px 80px;
   }
 
+  .dropdown {
+    display: flex;
+    align-items: center;
+    gap: span {
+      color: #262626;
+      font-family: Poppins;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+
   .logo-img {
     position: relative;
     z-index: 10;
@@ -267,6 +280,29 @@ export const MobileLinks = styled.ul`
         height: 16px;
         display: inline-block;
         margin: 0 0 0 2px;
+      }
+    }
+
+    button {
+      background-color: #00c0e4;
+      width: 190px;
+      height: 48px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #00c0e4;
+      &:hover {
+        border: 1px solid #00c0e4;
+      }
+      span {
+        color: #feffed;
+        font-family: Poppins;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 27px */
+        letter-spacing: 0.5px;
       }
     }
   }

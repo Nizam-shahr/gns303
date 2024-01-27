@@ -59,13 +59,13 @@ export const products = [
   {
     id: "5",
     images: [
-      "/vaseline-open.jpg",
-      "/vaseline-package.jpg",
-      "/vaseline-rubber.jpg",
-      "/vaseline-pot.jpg",
-      "/vaseline-packaging.jpg",
+      "/scented-1.jpg",
+      "/scented-2.jpg",
+      "/scented-3.jpg",
+      "/scented-3.jpg",
+      "/scented-3.jpg",
     ],
-    name: "lime",
+    name: "Scented Candle",
     price: "15",
     detail:
       "What is Lorem Ipsum Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book it has?",
@@ -190,7 +190,19 @@ export const names = [
     matric: "21/03SEN048",
   },
   {
-    name: "NWACHUKWU, Sinclair Oneyakachi",
-    matric: "21/03SEN049",
+    name: "MUNIR, Muhammad Kudu",
+    matric: "22/03SEN070",
+  },
+  {
+    name: "ABUTALIB, Abdullahi Isa",
+    matric: "22/03SEN085",
+  },
+  {
+    name: "SULAIMAN, Abba Musa",
+    matric: "22/03SEN068",
+  },
+  {
+    name: "ABDULLAHI, Jibrin",
+    matric: "22/03SEN086",
   },
 ];

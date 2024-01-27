@@ -66,7 +66,7 @@ export const TextWrapper = styled.div`
     }
   }
 
-  button {
+  a {
     width: 260px;
     height: 70px;
     border-radius: 20px;

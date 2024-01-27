@@ -73,7 +73,7 @@ const Card = ({ deviceType: { mobile, tablet, desktop }, images }) => {
       containerClass="custom"
       responsive={responsive}
       deviceType={deviceType}
-      autoPlay={false}
+      autoPlay={true}
       arrows={false}
       customDot={<CustomDot images={images} />}
     >

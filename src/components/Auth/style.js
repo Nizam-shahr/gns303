@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Modal } from "antd";
+import { deviceSizes } from "@/styles/themes";
 
 export const ModalWrapper = styled(Modal)`
   .ant-modal-content,
@@ -18,9 +19,12 @@ export const ModalWrapper = styled(Modal)`
 export const LeftContainer = styled.div`
   background: #00c0e4;
   width: 579px;
-  display: flex;
   border-top-left-radius: 12px;
   border-bottom-left-radius: 12px;
+  display: none;
+  @media ${deviceSizes.laptop} {
+    display: flex;
+  }
   .text {
     margin-top: 90px;
     margin-left: -155px;
@@ -51,16 +55,31 @@ export const RightContainer = styled.div`
   background: #feffed;
   width: 579px;
   border-radius: 12px;
-  padding: 80px 25px 20px;
+  padding: 80px 2px 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
 
   .ant-input {
-    width: 472.2px;
+    width: 100%;
     height: 67.728px;
   }
+  .disclaimer {
+    color: black;
+    font-family: Poppins;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+    letter-spacing: 0.5px;
+    padding-top: 20px;
+    text-align: center;
 
+    span {
+      font-weight: 500;
+      cursor: pointer;
+    }
+  }
   button {
     width: 191.255px;
     height: 45px;
@@ -72,6 +91,13 @@ export const RightContainer = styled.div`
     justify-content: center;
     margin: 0 auto;
 
+    &:hover {
+      background: transparent;
+      border: 1px solid #00c0e4;
+      span {
+        color: #262626;
+      }
+    }
     span {
       color: #feffed;
       font-family: Poppins;

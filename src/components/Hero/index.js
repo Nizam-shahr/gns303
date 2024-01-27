@@ -13,7 +13,13 @@ const Hero = () => {
     <Wrapper>
       <TextWrapper>
         <h1>Acquire the Skills you need to Suceed</h1>
-        <Button>Start Now!!</Button>
+        <a
+          href="https://api.whatsapp.com/send?phone=2349066777502&text=Hi, I'm messaging you from the skill acquisition page."
+          target="_blank"
+          rel="noreferrer"
+        >
+          <span>Start Now!!</span>
+        </a>
       </TextWrapper>
       <ImageWrapper>
         <Image

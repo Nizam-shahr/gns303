@@ -10,12 +10,12 @@ export default function App({
   pageProps: { session, ...pageProps },
 }) {
   return (
-    <SessionProvider session={session}>
-      <Layout>
-        <GlobalStyles />
-        <Component {...pageProps} />
-        <ToastContainer />
-      </Layout>
-    </SessionProvider>
+    // <SessionProvider session={session}>
+    <Layout>
+      <GlobalStyles />
+      <Component {...pageProps} />
+      <ToastContainer />
+    </Layout>
+    // </SessionProvider>
   );
 }

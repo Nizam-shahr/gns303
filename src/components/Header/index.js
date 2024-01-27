@@ -1,13 +1,31 @@
 import React, { useState } from "react";
 import { DesktopLinks, HeaderWrapper, MobileLinks } from "./style";
 import Link from "next/link";
-import { Button } from "antd";
+import { Button, Dropdown, Image, Menu, message } from "antd";
 import Logo from "../../../public/icons/logo.svg";
 import Auth from "../Auth";
 const Header = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [user, setUser] = useState(null);
 
+  const logUserOut = async () => {
+    try {
+      await account.deleteSession("current");
+      setUser(null);
+    } catch (error) {
+      message.error("Network error. Please try again.");
+      console.log("logout error: " + error);
+    }
+  };
+
+  const menu = (
+    <Menu>
+      <Menu.Item key="2" onClick={logUserOut}>
+        Log out
+      </Menu.Item>
+    </Menu>
+  );
   return (
     <>
       <HeaderWrapper>
@@ -26,12 +44,28 @@ const Header = () => {
           </li>
 
           <li>
-            <Button
-              className="btn"
-              onClick={() => setIsModalOpen((prev) => !prev)}
-            >
-              <span>Sign up / Login</span>
-            </Button>
+            {user === null ? (
+              <Button onClick={() => setIsModalOpen(true)} className="btn">
+                <span>Sign up / Login</span>
+              </Button>
+            ) : (
+              <Dropdown overlay={menu} trigger={["click"]}>
+                <div className="dropdown">
+                  <span>{user.name}</span>
+                  <div>
+                    <Image
+                      src="/user.png"
+                      width={50}
+                      height={50}
+                      style={{
+                        border: "1px solid red",
+                        borderRadius: 50,
+                      }}
+                    />
+                  </div>
+                </div>
+              </Dropdown>
+            )}
           </li>
         </DesktopLinks>
         <div
@@ -56,13 +90,21 @@ const Header = () => {
           </li>
 
           <li>
-            <Button className="btn">
-              <span>Sign up / Login</span>
-            </Button>
+            {user === null ? (
+              <Button onClick={() => setIsModalOpen(true)} className="btn">
+                <span>Sign up / Login</span>
+              </Button>
+            ) : (
+              <h1>welcome{user.name}</h1>
+            )}
           </li>
         </MobileLinks>
       </HeaderWrapper>
-      <Auth handleClose={() => setIsModalOpen(false)} openModal={isModalOpen} />
+      <Auth
+        handleClose={() => setIsModalOpen(false)}
+        openModal={isModalOpen}
+        setUser={setUser}
+      />
     </>
   );
 };
